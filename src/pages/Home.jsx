@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import appsData from "../data/appsData";
 import AppCard from "../components/AppCard";
+import hero from "../assets/hero.png";
 
 export default function Home() {
   const navigate = useNavigate();
@@ -10,18 +11,24 @@ export default function Home() {
   return (
     <div className="container mx-auto px-4 py-10">
       {/* Banner */}
-      <section className="bg-gradient-to-r from-indigo-600 to-blue-500 rounded-lg text-white p-10 mb-8">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4">
-          Discover apps you’ll love
+      <section className="rounded-lg p-6 md:p-10 mb-8 text-center flex flex-col items-center">
+        {/* Title */}
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
+          We Build <br /> Productive Apps
         </h1>
-        <p className="max-w-2xl">
-          Curated apps for productivity, creativity and daily life — fast and
-          secure.
+
+        {/* Description */}
+        <p className="max-w-xl sm:max-w-2xl mb-6 text-sm sm:text-base md:text-lg">
+          At HERO.IO, we craft innovative apps designed to make everyday life
+          simpler, smarter, and more exciting. Our goal is to turn your ideas
+          into digital experiences that truly make an impact.
         </p>
-        <div className="mt-6 flex gap-4">
+
+        {/* Buttons */}
+        <div className="mt-6 flex flex-col sm:flex-row justify-center gap-4 w-full sm:w-auto">
           <button
             onClick={() => navigate("/apps")}
-            className="px-5 py-2 bg-white text-blue-600 rounded shadow"
+            className="px-5 py-2 bg-white text-blue-600 rounded shadow w-full sm:w-auto"
           >
             App Store
           </button>
@@ -29,10 +36,19 @@ export default function Home() {
             href="https://play.google.com"
             target="_blank"
             rel="noreferrer"
-            className="px-5 py-2 border rounded bg-white/10"
+            className="px-5 py-2 border rounded bg-white/30 w-full sm:w-auto"
           >
             Play Store
           </a>
+        </div>
+
+        {/* Image */}
+        <div className="mt-6 w-full max-w-md">
+          <img
+            src={hero}
+            alt="hero"
+            className="mx-auto w-full h-auto rounded-lg"
+          />
         </div>
       </section>
 
