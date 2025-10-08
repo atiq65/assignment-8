@@ -59,7 +59,7 @@ export default function Header() {
         {/* Right: GitHub Button with Icon */}
         <div className="hidden md:block">
           <a
-            href="https://github.com/your-github-username"
+            href="https://github.com/atiq65"
             target="_blank"
             rel="noreferrer"
             style={{
