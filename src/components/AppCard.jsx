@@ -6,7 +6,7 @@ export default function AppCard({ app }) {
   return (
     <div
       onClick={() => navigate(`/app/${app.id}`)}
-      className="cursor-pointer border bg-white rounded-lg p-4 card-shadow"
+      className=" cursor-pointer border bg-white rounded-lg p-4 card-shadow"
     >
       <div className="flex items-center gap-4">
         <img
