@@ -1,7 +1,7 @@
 const appsData = [
   {
     image: "https://picsum.photos/seed/1/300/300",
-    title: "ChatMaster AI",
+    title: "Forest: Focus for Productivity",
     companyName: "TechNova",
     id: 1,
     description: "Smart AI chat assistant for messages, scheduling and notes.",
@@ -19,7 +19,7 @@ const appsData = [
   },
   {
     image: "https://picsum.photos/seed/2/300/300",
-    title: "PhotoTune Pro",
+    title: "SmPlan:ToDo List with Reminder",
     companyName: "PixelSoft",
     id: 2,
     description: "Advanced photo editor with AI filters and batch export.",
@@ -37,7 +37,7 @@ const appsData = [
   },
   {
     image: "https://picsum.photos/seed/3/300/300",
-    title: "FitTrack",
+    title: "FLIP - Focus Timer for Study",
     companyName: "HealthPlus",
     id: 3,
     description: "Track workouts, calories, and sync wearable devices.",
@@ -55,7 +55,7 @@ const appsData = [
   },
   {
     image: "https://picsum.photos/seed/4/300/300",
-    title: "CodeVault",
+    title: "Pomocat - Cute Pomodoro Timer",
     companyName: "DevLabs",
     id: 4,
     description: "Cloud-based snippet manager with team sharing.",
@@ -73,7 +73,7 @@ const appsData = [
   },
   {
     image: "https://picsum.photos/seed/5/300/300",
-    title: "MusicFlow",
+    title: "Time Planner: Schedule & Tasks",
     companyName: "Wave Studio",
     id: 5,
     description: "Stream and manage your favorite playlists offline.",
@@ -91,7 +91,7 @@ const appsData = [
   },
   {
     image: "https://picsum.photos/seed/6/300/300",
-    title: "NoteSpace",
+    title: "Morning Habits - Daily Routine",
     companyName: "MindHub",
     id: 6,
     description: "Smart notes, rich text and cross-device sync.",
@@ -109,7 +109,7 @@ const appsData = [
   },
   {
     image: "https://picsum.photos/seed/7/300/300",
-    title: "TaskHero",
+    title: "Focus Plant: Pomodoro Forest",
     companyName: "OrganizeIt",
     id: 7,
     description: "Smart task manager with reminders and calendar sync.",
@@ -127,7 +127,7 @@ const appsData = [
   },
   {
     image: "https://picsum.photos/seed/8/300/300",
-    title: "WeatherCast",
+    title: "Alarmy - Alarm Clock & Sleep",
     companyName: "Skyline Apps",
     id: 8,
     description: "Live weather updates, radar and alerts.",

@@ -29,18 +29,23 @@ export default function Home() {
 
         {/* Buttons */}
         <div className="mt-6 flex flex-col sm:flex-row justify-center gap-4 w-full sm:w-auto">
-          <button
-            onClick={() => navigate("/apps")}
-            className="px-5 py-2 flex items-center bg-white text-blue-600 rounded shadow w-full sm:w-auto"
+          {/* Google Play */}
+          <a
+            href="https://play.google.com/store/games?hl=en"
+            target="_blank"
+            rel="noreferrer"
+            className="px-5 py-2 flex items-center gap-2 bg-white text-2xl font-semibold rounded shadow w-full sm:w-auto justify-center hover:opacity-90 transition"
           >
             <img src={google} alt="google" className="w-[32px] h-[32px]" />
             Google Play
-          </button>
+          </a>
+
+          {/* App Store */}
           <a
-            href="https://play.google.com"
+            href="https://www.apple.com/app-store/"
             target="_blank"
             rel="noreferrer"
-            className="px-5 py-2 flex items-center gap-2 border rounded bg-white/30 w-full sm:w-auto"
+            className="px-5 py-2 flex items-center gap-4 rounded text-2xl font-semibold bg-white/30 w-full sm:w-auto justify-center hover:opacity-90 transition"
           >
             <img src={store} alt="store" className="w-[32px] h-[32px]" />
             App Store
