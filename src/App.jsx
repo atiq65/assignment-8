@@ -3,7 +3,7 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import LoadingBar from "./components/LoadingBar";
-
+import RatingChart from "./components/RatingChart";
 const Home = React.lazy(() => import("./pages/Home"));
 const AllApps = React.lazy(() => import("./pages/AllApps"));
 const Installation = React.lazy(() => import("./pages/Installation"));

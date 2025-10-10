@@ -67,7 +67,7 @@ export default function AllApps() {
       {/* 🔹 App Cards Section */}
       {filtered.length === 0 ? (
         <div className="text-center py-16 text-4xl text-gray-600">
-          No App Found
+          No Apps Found
         </div>
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
