@@ -72,10 +72,10 @@ export default function AppDetails() {
         </div>
 
         <div className="md:col-span-2">
-          <h1 className="text-2xl font-semibold">{app.title}</h1>
+          <h1 className="text-3xl font-bold">{app.title}</h1>
           <p className="text-sm text-gray-500">{app.companyName}</p>
           <div className="mt-4 flex items-center gap-4">
-            <div className="text-lg font-medium">⭐ {app.ratingAvg}</div>
+            <div className="text-lg font-medium"> {app.ratingAvg}</div>
             <div className="text-sm text-gray-600">{app.reviews} reviews</div>
             <div className="text-sm text-gray-600">
               Downloads: {app.downloads.toLocaleString()}

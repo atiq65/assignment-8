@@ -63,27 +63,32 @@ export default function Home() {
       </section>
 
       {/* States */}
-      <section className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-        <div
-          className="p-6 rounded-lg"
-          style={{ background: "linear-gradient(90deg,#ecfeff,#cffafe)" }}
-        >
-          <h3 className="font-semibold">Installed</h3>
-          <p className="text-sm mt-2">Apps you installed</p>
-        </div>
-        <div
-          className="p-6 rounded-lg"
-          style={{ background: "linear-gradient(90deg,#fff7ed,#ffedd5)" }}
-        >
-          <h3 className="font-semibold">New</h3>
-          <p className="text-sm mt-2">Just released</p>
-        </div>
-        <div
-          className="p-6 rounded-lg"
-          style={{ background: "linear-gradient(90deg,#f5f3ff,#ede9fe)" }}
-        >
-          <h3 className="font-semibold">Top Rated</h3>
-          <p className="text-sm mt-2">Highest rated this month</p>
+      <section
+        className="p-[80px] w-full mb-[80px] text-center text-white"
+        style={{
+          background:
+            "linear-gradient(125.07deg, rgba(99, 46, 227, 1), rgba(159, 98, 242, 1) 100%)",
+        }}
+      >
+        <h1 className="text-5xl font-bold">
+          Trusted by Millions, Built for You
+        </h1>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+          <div className="p-6 rounded-lg">
+            <p>Total Downloads</p>
+            <h3 className="text-6xl font-extrabold">29.6M</h3>
+            <p className="text-sm mt-2">21% more than last month</p>
+          </div>
+          <div className="p-6 rounded-lg">
+            <p>Total Reviews</p>
+            <h3 className="text-6xl font-extrabold">906K</h3>
+            <p className="text-sm mt-2">46% more than last month</p>
+          </div>
+          <div className="p-6 rounded-lg">
+            <p>Active Apps</p>
+            <h3 className="text-6xl font-extrabold">132+</h3>
+            <p className="text-sm mt-2">31 more will Launch</p>
+          </div>
         </div>
       </section>
 

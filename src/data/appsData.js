@@ -1,6 +1,13 @@
+import app1 from "../assets/demo-app (1).webp";
+import app2 from "../assets/demo-app (2).webp";
+import app3 from "../assets/demo-app (3).webp";
+import app4 from "../assets/demo-app (4).webp";
+import app5 from "../assets/demo-app (5).webp";
+import app6 from "../assets/demo-app (6).webp";
+
 const appsData = [
   {
-    image: "https://picsum.photos/seed/1/300/300",
+    image: app1,
     title: "Forest: Focus for Productivity",
     companyName: "TechNova",
     id: 1,
@@ -8,7 +15,7 @@ const appsData = [
     size: 25,
     reviews: 1200,
     ratingAvg: 4.5,
-    downloads: 1000000,
+    downloads: "9M",
     ratings: [
       { name: "1 star", count: 50 },
       { name: "2 star", count: 80 },
@@ -18,7 +25,7 @@ const appsData = [
     ],
   },
   {
-    image: "https://picsum.photos/seed/2/300/300",
+    image: app2,
     title: "SmPlan:ToDo List with Reminder",
     companyName: "PixelSoft",
     id: 2,
@@ -26,7 +33,7 @@ const appsData = [
     size: 60,
     reviews: 890,
     ratingAvg: 4.3,
-    downloads: 850000,
+    downloads: "9M",
     ratings: [
       { name: "1 star", count: 30 },
       { name: "2 star", count: 70 },
@@ -36,7 +43,7 @@ const appsData = [
     ],
   },
   {
-    image: "https://picsum.photos/seed/3/300/300",
+    image: app3,
     title: "FLIP - Focus Timer for Study",
     companyName: "HealthPlus",
     id: 3,
@@ -44,7 +51,7 @@ const appsData = [
     size: 45,
     reviews: 1400,
     ratingAvg: 4.7,
-    downloads: 1250000,
+    downloads: "9M",
     ratings: [
       { name: "1 star", count: 40 },
       { name: "2 star", count: 90 },
@@ -54,7 +61,7 @@ const appsData = [
     ],
   },
   {
-    image: "https://picsum.photos/seed/4/300/300",
+    image: app4,
     title: "Pomocat - Cute Pomodoro Timer",
     companyName: "DevLabs",
     id: 4,
@@ -62,7 +69,7 @@ const appsData = [
     size: 35,
     reviews: 450,
     ratingAvg: 4.6,
-    downloads: 670000,
+    downloads: "9M",
     ratings: [
       { name: "1 star", count: 20 },
       { name: "2 star", count: 50 },
@@ -72,7 +79,7 @@ const appsData = [
     ],
   },
   {
-    image: "https://picsum.photos/seed/5/300/300",
+    image: app5,
     title: "Time Planner: Schedule & Tasks",
     companyName: "Wave Studio",
     id: 5,
@@ -80,7 +87,7 @@ const appsData = [
     size: 55,
     reviews: 2000,
     ratingAvg: 4.8,
-    downloads: 2500000,
+    downloads: "9M",
     ratings: [
       { name: "1 star", count: 30 },
       { name: "2 star", count: 60 },
@@ -90,7 +97,7 @@ const appsData = [
     ],
   },
   {
-    image: "https://picsum.photos/seed/6/300/300",
+    image: app6,
     title: "Morning Habits - Daily Routine",
     companyName: "MindHub",
     id: 6,
@@ -98,7 +105,7 @@ const appsData = [
     size: 30,
     reviews: 950,
     ratingAvg: 4.4,
-    downloads: 890000,
+    downloads: "9M",
     ratings: [
       { name: "1 star", count: 40 },
       { name: "2 star", count: 60 },
@@ -116,7 +123,7 @@ const appsData = [
     size: 28,
     reviews: 500,
     ratingAvg: 4.2,
-    downloads: 500000,
+    downloads: "9M",
     ratings: [
       { name: "1 star", count: 50 },
       { name: "2 star", count: 70 },
@@ -134,7 +141,7 @@ const appsData = [
     size: 22,
     reviews: 1100,
     ratingAvg: 4.1,
-    downloads: 780000,
+    downloads: "9M",
     ratings: [
       { name: "1 star", count: 80 },
       { name: "2 star", count: 90 },
@@ -152,7 +159,7 @@ const appsData = [
     size: 65,
     reviews: 1700,
     ratingAvg: 4.6,
-    downloads: 1450000,
+    downloads: "9M",
     ratings: [
       { name: "1 star", count: 60 },
       { name: "2 star", count: 100 },
@@ -170,7 +177,7 @@ const appsData = [
     size: 40,
     reviews: 600,
     ratingAvg: 4.3,
-    downloads: 600000,
+    downloads: "9M",
     ratings: [
       { name: "1 star", count: 40 },
       { name: "2 star", count: 60 },
@@ -188,7 +195,7 @@ const appsData = [
     size: 38,
     reviews: 740,
     ratingAvg: 4.4,
-    downloads: 430000,
+    downloads: "9M",
     ratings: [
       { name: "1 star", count: 25 },
       { name: "2 star", count: 45 },
@@ -206,7 +213,7 @@ const appsData = [
     size: 47,
     reviews: 520,
     ratingAvg: 4.2,
-    downloads: 300000,
+    downloads: "9M",
     ratings: [
       { name: "1 star", count: 20 },
       { name: "2 star", count: 30 },
@@ -224,7 +231,7 @@ const appsData = [
     size: 18,
     reviews: 410,
     ratingAvg: 4.0,
-    downloads: 220000,
+    downloads: "9M",
     ratings: [
       { name: "1 star", count: 15 },
       { name: "2 star", count: 30 },
@@ -242,7 +249,7 @@ const appsData = [
     size: 12,
     reviews: 300,
     ratingAvg: 3.9,
-    downloads: 150000,
+    downloads: "9M",
     ratings: [
       { name: "1 star", count: 10 },
       { name: "2 star", count: 15 },
@@ -260,7 +267,7 @@ const appsData = [
     size: 27,
     reviews: 380,
     ratingAvg: 4.1,
-    downloads: 260000,
+    downloads: "9M",
     ratings: [
       { name: "1 star", count: 18 },
       { name: "2 star", count: 25 },
@@ -278,7 +285,7 @@ const appsData = [
     size: 20,
     reviews: 460,
     ratingAvg: 4.3,
-    downloads: 340000,
+    downloads: "9M",
     ratings: [
       { name: "1 star", count: 22 },
       { name: "2 star", count: 40 },
@@ -296,7 +303,7 @@ const appsData = [
     size: 24,
     reviews: 270,
     ratingAvg: 4.0,
-    downloads: 180000,
+    downloads: "9M",
     ratings: [
       { name: "1 star", count: 12 },
       { name: "2 star", count: 18 },
@@ -314,7 +321,7 @@ const appsData = [
     size: 32,
     reviews: 330,
     ratingAvg: 4.2,
-    downloads: 210000,
+    downloads: "9M",
     ratings: [
       { name: "1 star", count: 14 },
       { name: "2 star", count: 26 },
@@ -332,7 +339,7 @@ const appsData = [
     size: 48,
     reviews: 210,
     ratingAvg: 4.1,
-    downloads: 130000,
+    downloads: "9M",
     ratings: [
       { name: "1 star", count: 9 },
       { name: "2 star", count: 12 },
@@ -350,7 +357,43 @@ const appsData = [
     size: 15,
     reviews: 290,
     ratingAvg: 4.0,
-    downloads: 170000,
+    downloads: "9M",
+    ratings: [
+      { name: "1 star", count: 11 },
+      { name: "2 star", count: 20 },
+      { name: "3 star", count: 70 },
+      { name: "4 star", count: 80 },
+      { name: "5 star", count: 109 },
+    ],
+  },
+  {
+    image: "https://picsum.photos/seed/20/300/300",
+    title: "HabitLoop",
+    companyName: "DailyUp",
+    id: 20,
+    description: "Build and track habits with streaks and reminders.",
+    size: 15,
+    reviews: 290,
+    ratingAvg: 4.0,
+    downloads: "9M",
+    ratings: [
+      { name: "1 star", count: 11 },
+      { name: "2 star", count: 20 },
+      { name: "3 star", count: 70 },
+      { name: "4 star", count: 80 },
+      { name: "5 star", count: 109 },
+    ],
+  },
+  {
+    image: "https://picsum.photos/seed/20/300/300",
+    title: "HabitLoop",
+    companyName: "DailyUp",
+    id: 20,
+    description: "Build and track habits with streaks and reminders.",
+    size: 15,
+    reviews: 290,
+    ratingAvg: 4.0,
+    downloads: "9M",
     ratings: [
       { name: "1 star", count: 11 },
       { name: "2 star", count: 20 },
