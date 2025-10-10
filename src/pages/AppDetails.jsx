@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import appsData from "../data/appsData";
 import {
@@ -10,7 +10,6 @@ import {
   ResponsiveContainer,
   LabelList,
 } from "recharts";
-import { Download, Star, MessageSquare } from "lucide-react";
 import toast from "react-hot-toast";
 import iconDownload from "../assets/icon-downloads.png";
 import iconRating from "../assets/icon-ratings.png";
@@ -20,6 +19,21 @@ export default function AppDetails() {
   const { id } = useParams();
   const app = appsData.find((a) => a.id === parseInt(id));
 
+  //  Installed apps state (string IDs)
+  const [installedIds, setInstalledIds] = useState(() => {
+    try {
+      return JSON.parse(localStorage.getItem("installedApps") || "[]").map(
+        String
+      );
+    } catch {
+      return [];
+    }
+  });
+
+  useEffect(() => {
+    localStorage.setItem("installedApps", JSON.stringify(installedIds));
+  }, [installedIds]);
+
   if (!app) {
     return (
       <div className="text-center py-20 text-gray-600 text-lg">
@@ -28,8 +42,15 @@ export default function AppDetails() {
     );
   }
 
+  const isInstalled = installedIds.includes(String(app.id));
+
   const handleInstall = () => {
-    toast.success(`${app.title} Installed Successfully!`);
+    if (!isInstalled) {
+      setInstalledIds([...installedIds, String(app.id)]);
+      toast.success(`${app.title} Installed Successfully!`);
+    } else {
+      toast("App already installed");
+    }
   };
 
   return (
@@ -76,7 +97,6 @@ export default function AppDetails() {
                 alt="iconReview"
                 className="w-[16px] h-[16px]"
               />
-
               <span className="text-gray-500 text-sm">Total Reviews</span>
               <span className="text-xl font-bold">{app.reviews}</span>
             </div>
@@ -85,19 +105,22 @@ export default function AppDetails() {
           {/* Install Button */}
           <button
             onClick={handleInstall}
-            className="bg-gradient-to-r from-green-400 to-teal-500 text-white px-6 py-2 rounded-lg font-semibold hover:shadow-lg transition"
+            className={`px-6 py-2 rounded-lg font-semibold text-white ${
+              isInstalled
+                ? "bg-[#00d390] hover:bg-[#00c880]"
+                : "bg-gradient-to-r from-green-400 to-teal-500 hover:shadow-lg"
+            }`}
           >
-            Install Now ({app.size})
+            {isInstalled ? "Installed" : `Install Now (${app.size})`}
           </button>
         </div>
       </div>
 
-      {/*  Rating Chart Section */}
+      {/* Rating Chart Section */}
       <div className="mt-10 bg-white rounded-2xl shadow-md p-6">
         <h2 className="text-2xl font-bold text-gray-800 mb-6">
           Rating Distribution
         </h2>
-
         <ResponsiveContainer width="100%" height={280}>
           <BarChart
             layout="vertical"
@@ -136,7 +159,7 @@ export default function AppDetails() {
         </ResponsiveContainer>
       </div>
 
-      {/*  Description Section */}
+      {/* Description Section */}
       <div className="mt-10 bg-white rounded-2xl shadow-md p-6">
         <h2 className="text-2xl font-bold text-gray-800 mb-3">Description</h2>
         <p className="text-gray-600 leading-relaxed">{app.description}</p>

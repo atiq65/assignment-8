@@ -121,7 +121,7 @@ export default function Header() {
 
             {/* GitHub Button with Icon for Mobile */}
             <a
-              href="https://github.com/your-github-username"
+              href="https://github.com/atiq65"
               target="_blank"
               rel="noreferrer"
               style={{

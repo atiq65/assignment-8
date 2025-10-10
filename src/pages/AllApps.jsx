@@ -1,20 +1,26 @@
 import React, { useEffect, useMemo, useState } from "react";
-import { AiOutlineSearch } from "react-icons/ai"; // react-icons
+import { AiOutlineSearch } from "react-icons/ai";
 import appsData from "../data/appsData";
 import AppCard from "../components/AppCard";
 
-export default function AllApps() {
+export default function AllApps({ setGlobalLoading }) {
   const [query, setQuery] = useState("");
   const [loadingSearch, setLoadingSearch] = useState(false);
-  const [sort, setSort] = useState(""); // "high-low" or "low-high"
+  const [sort, setSort] = useState("");
 
+  //  Search loading control
   useEffect(() => {
     if (query.trim().length > 0) {
       setLoadingSearch(true);
-      const t = setTimeout(() => setLoadingSearch(false), 350);
+      setGlobalLoading?.(true); // show top loading bar
+      const t = setTimeout(() => {
+        setLoadingSearch(false);
+        setGlobalLoading?.(false); // hide bar
+      }, 350);
       return () => clearTimeout(t);
     } else {
       setLoadingSearch(false);
+      setGlobalLoading?.(false);
     }
   }, [query]);
 
@@ -23,17 +29,17 @@ export default function AllApps() {
       a.title.toLowerCase().includes(query.toLowerCase())
     );
     if (sort === "high-low") {
-      return [...base].sort((a, b) => b.downloads - a.downloads); // high -> low
+      return [...base].sort((a, b) => b.downloads - a.downloads);
     }
     if (sort === "low-high") {
-      return [...base].sort((a, b) => a.downloads - b.downloads); // low -> high
+      return [...base].sort((a, b) => a.downloads - b.downloads);
     }
     return base;
   }, [query, sort]);
 
   return (
     <div className="container mx-auto px-4 py-8">
-      {/* 🔹 Title & Description Section */}
+      {/*  Title & Description */}
       <div className="text-center mb-10">
         <h2 className="text-5xl font-bold text-gray-800 mb-2">
           Our All Applications
@@ -43,7 +49,7 @@ export default function AllApps() {
         </p>
       </div>
 
-      {/* 🔹 Header Section */}
+      {/*  Search & Header */}
       <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 mb-6">
         <div className="flex items-center gap-2">
           <p className="text-2xl font-semibold">({appsData.length})</p>
@@ -64,7 +70,7 @@ export default function AllApps() {
         </div>
       </div>
 
-      {/* 🔹 App Cards Section */}
+      {/*  App Cards */}
       {filtered.length === 0 ? (
         <div className="text-center py-16 text-4xl text-gray-600">
           No Apps Found

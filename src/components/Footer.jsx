@@ -1,6 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { FaGithub, FaTwitter, FaLinkedin, FaFacebook } from "react-icons/fa";
+import {
+  FaGithub,
+  FaTwitter,
+  FaLinkedin,
+  FaFacebook,
+  FaWhatsapp,
+} from "react-icons/fa";
 import logo from "../assets/logo.png";
 
 export default function Footer() {
@@ -48,7 +54,7 @@ export default function Footer() {
         {/* Contact & Social */}
         <div>
           <h4 className="font-semibold mb-2">Contact</h4>
-          <p className="text-sm mb-2">support@heroio.example</p>
+          <p className="text-sm mb-2">sheikhatiqhasan@gmail.com</p>
 
           {/* Social Icons */}
           <div className="flex gap-3 text-xl">
@@ -66,7 +72,7 @@ export default function Footer() {
               rel="noreferrer"
               className="hover:text-white transition-colors"
             >
-              <FaTwitter />
+              <FaWhatsapp />
             </a>
             <a
               href="https://linkedin.com/in/your-linkedin"
@@ -77,7 +83,7 @@ export default function Footer() {
               <FaLinkedin />
             </a>
             <a
-              href="https://facebook.com/your-facebook"
+              href="https://www.facebook.com/share/1UJ9hDvLfW/"
               target="_blank"
               rel="noreferrer"
               className="hover:text-white transition-colors"
